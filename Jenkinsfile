@@ -36,12 +36,7 @@ stage('Remove Unused docker image'){
       bat "docker rmi $registry:$BUILD_NUMBER"
     }
   }
-        stage('Deploy'){
-     steps{
-             bat 'docker run'
-            }
-        }
-  
+
 }
 
 }
