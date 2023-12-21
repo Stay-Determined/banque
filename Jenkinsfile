@@ -38,8 +38,7 @@ stage('Remove Unused docker image'){
   }
         stage('Deploy'){
      steps{
-            bat 'docker create'
-             bat 'docker run'
+             bat 'docker run -d -p'
             }
         }
   
