@@ -1,5 +1,13 @@
-FROM nginx:alpine
+FROM node:13.6.0-alpine
 
-COPY . /usr/share/nginx/html
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-EXPOSE 80
+COPY package*.json ./
+RUN rm -rf package-lock.json node_modules
+RUN npm install 
+
+COPY . /usr/src/app
+
+USER node 
+CMD [ "npm", "start" ]
