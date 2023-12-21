@@ -6,9 +6,6 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN rm -rf package-lock.json node_modules
 RUN npm install 
-RUN docker create
-RUN docker run
-
 
 
 COPY . /usr/src/app
