@@ -10,5 +10,7 @@ RUN npm install
 
 COPY . /usr/src/app
 
+
+EXPOSE 8085
 USER node 
-CMD [ "npm", "start" ]
+CMD npm run start
